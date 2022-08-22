@@ -1,6 +1,7 @@
 import { Input } from '../ui/Input.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterContacts, getFilterValue } from 'store/slice';
+// import { useGetContactsQuery } from 'store/contactsSlice';
 
 export const Filter = () => {
   const filter = useSelector(getFilterValue);

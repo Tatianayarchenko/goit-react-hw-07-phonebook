@@ -18,7 +18,7 @@ const contacts = createSlice({
   name: 'contacts',
   initialState,
   reducers: {
-    addContacts(state, action) {
+    addContact(state, action) {
       return { ...state, contacts: [...state.contacts, action.payload] };
     },
     removeContacts(state, action) {
@@ -42,7 +42,7 @@ const persistConfig = {
 
 export default persistReducer(persistConfig, contacts.reducer);
 
-export const { addContacts, removeContacts, filterContacts } = contacts.actions;
+export const { addContact, removeContacts, filterContacts } = contacts.actions;
 
 // Selectors
 
