@@ -10,7 +10,7 @@ import {
 export const Contacts = () => {
   const filter = useSelector(getFilterValue);
 
-  const { data, error, isLoading } = useGetContactsQuery();
+  const { data } = useGetContactsQuery();
   const [deleteContact, result] = useDeleteContactMutation();
 
   const getVisibleContacts = () => {
