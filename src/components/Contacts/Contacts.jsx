@@ -2,10 +2,9 @@ import { ContactsList, ContactsItem, ContactsText } from './Contacts.styled';
 import { Button } from '../ui/Button.styled';
 import { useSelector } from 'react-redux';
 import { getFilterValue } from 'store/slice';
-import {
-  useGetContactsQuery,
-  useDeleteContactMutation,
-} from 'store/contactsSlice';
+import { useGetContactsQuery, useDeleteContactMutation } from 'api/contactsApi';
+import { useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 export const Contacts = () => {
   const filter = useSelector(getFilterValue);
@@ -23,6 +22,12 @@ export const Contacts = () => {
   };
 
   const visibleContacts = getVisibleContacts();
+
+  useEffect(() => {
+    if (result.isError) {
+      toast.error('This contact has been deleted');
+    }
+  }, [result.isError]);
 
   return (
     <ContactsList>

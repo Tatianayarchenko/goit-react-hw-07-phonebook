@@ -5,6 +5,8 @@ export const Button = styled.button`
   height: 25px;
   border: none;
   border-radius: 5px;
-  background-color: #388ffd;
-  color: #ffffff;
+  background-color: #15181a;
+  color: #e99797;
+  font-size: 16px;
+  width: inherit;
 `;

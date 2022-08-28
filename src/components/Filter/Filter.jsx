@@ -1,4 +1,4 @@
-import { Input } from '../ui/Input.styled';
+import { Input } from './Input.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterContacts, getFilterValue } from 'store/slice';
 
