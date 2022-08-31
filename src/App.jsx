@@ -3,6 +3,7 @@ import { ContactForm } from 'components/ContactForm';
 import { Contacts } from 'components/Contacts';
 import { Filter } from 'components/Filter';
 import { Container } from 'components/ui/Container.styled';
+import { GlobalStyle } from 'components/ui/GlobalStyle';
 
 export const App = () => (
   <Container>
@@ -11,6 +12,7 @@ export const App = () => (
     <h2>Contacts</h2>
     <Filter />
     <Contacts />
+    <GlobalStyle />
     <ToastContainer autoClose={3000} theme="dark" />
   </Container>
 );
