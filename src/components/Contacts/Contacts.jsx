@@ -1,8 +1,11 @@
 import { ContactsList, ContactsItem, ContactsText } from './Contacts.styled';
 import { Button } from '../ui/Button.styled';
 import { useSelector } from 'react-redux';
-import { getFilterValue } from 'store/slice';
-import { useGetContactsQuery, useDeleteContactMutation } from 'api/contactsApi';
+import { getFilterValue } from 'store/contactsApi';
+import {
+  useGetContactsQuery,
+  useDeleteContactMutation,
+} from 'store/contactsApi';
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 
